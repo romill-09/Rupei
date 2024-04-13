@@ -22,6 +22,7 @@ h1, h2 {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    border-radius: 5px;
     background-color: #1C1C1C; /* Dark gray input section background */
 }
 
@@ -48,13 +49,14 @@ h1, h2 {
 
 .expenses-list {
     margin: 20px;
+    color: #FFFFFF;
 }
 
 table {
-    width: 90%; /* Decrease table width */
+    width: 90%; 
     border-collapse: collapse;
-    border-radius: 8px; /* Add curved border to tables */
-    overflow: hidden; /* Ensures border-radius works properly */
+    border-radius: 8px; 
+    overflow: hidden; 
 }
 
 th, td {
@@ -65,7 +67,7 @@ th, td {
 
 th {
     background-color: #55BE96; /* Neon green header */
-    color: #010101; /* Black text */
+    color:#FFFFFF;
 }
 
 tfoot td {
