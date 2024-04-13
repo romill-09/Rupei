@@ -69,3 +69,6 @@ signInButton.addEventListener("click", () => {
 registerButton.addEventListener("click", () => {
   window.location.href = "register.html";
 });
+updateButton.addEventListener("click", () => {
+  window.location.href = "dashboard.html";
+});
