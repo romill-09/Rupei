@@ -1,0 +1,25 @@
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%; 
+    flex-direction: column; 
+    margin-left:30% ;
+    margin-right:30% ;
+   
+}
+
+.button {
+    background-color: #55BE96;
+    color: #1C1C1C;
+    text-decoration: none;
+    padding: 20px 30px;
+    margin: 20px 0; /* Add vertical margin */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:1.3em;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: hsl(157, 45%, 54%,50%);
+}
