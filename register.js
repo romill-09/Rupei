@@ -38,36 +38,8 @@ submitClick.addEventListener("click", async(e) => {
     });
     console.log("Document successfully written!");
     // Optionally, you can redirect the user to another page after successful submission
-    window.location.href = "template.html";
+    window.location.href = "template1.html";
   } catch (error) {
     console.error("Error writing document: ", error);
   }
 })
-// Function to update data
-// const updateData = async () => {
-//   // Get input values
-//   const fullName = document.getElementById("fullName").value;
-//   const contactNo = document.getElementById("contactNo").value;
-//   const employmentType = document.getElementById("employmentType").value;
-//   const annualIncome = document.getElementById("annualIncome").value;
-//   console.log(fullName, contactNo, employmentType, annualIncome);
-
-//   try {
-//     // Add a new document to the "users" collection
-//     await addDoc(collection(db, "users"), {
-//       fullName,
-//       contactNo,
-//       employmentType,
-//       annualIncome
-//     });
-//     console.log("Document successfully written!");
-//     // Optionally, you can redirect the user to another page after successful submission
-//     window.location.href = "template.html";
-//   } catch (error) {
-//     console.error("Error writing document: ", error);
-//   }
-// };
-
-// // Wait for the DOM content to load
-//   // Add event listener to the "Update" button
-//   document.getElementById("updateButton").addEventListener("click", updateData);

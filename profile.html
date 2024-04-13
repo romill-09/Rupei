@@ -101,46 +101,53 @@
             </div>
          </nav>
       </div>
-   <main class="main container" id="main">
-         <section class="info">
-            <div class="user">
-               <img src="assets\img\Profilepicture.jpg" alt="" class="profileimg">
-               <h2>Contact Details</h2>
-               <p>Full Name</p>
-               <h3>Customer Name</h3>
-               <p>Phone Number</p>
-               <h3>(+91) 999999999</h3>
-               <p>Email Id</p>
-               <h3>customer@email.com</h3>
+
+         <main class="main container" id="main">
+            <section class="info">
+                <div class="user">
+                    <img src="assets\img\Profilepicture.jpg" alt="" class="profileimg">
+                    <h2>Contact Details</h2>
+                    <p>Full Name</p>
+                    <h3 id="fullName"></h3> <!-- Placeholder for Full Name -->
+                    <p>Phone Number</p>
+                    <h3 id="contactNo"></h3> <!-- Placeholder for Phone Number -->
+                    <p>Email Id</p>
+                    <h3 id="emailId"></h3> <!-- Placeholder for Email ID -->
+                </div>
+            </section>
+            <div class=".right-section ">
+                <section class="employment">
+                    <div class="user">
+                        <h2>Employment Details</h2>
+                        <p>Employment Type</p>
+                        <h3 id="employmentType"></h3> <!-- Placeholder for Employment Type -->
+                        <p>Annual Income</p>
+                        <h3 id="annualIncome"></h3> <!-- Placeholder for Annual Income -->
+                    </div>
+                </section>
+        
+                <section class="budget">
+                    <div class="user">
+                        <h2>Monthly Budget</h2>
+                        <!-- Placeholder for Monthly Budget -->
+                        <h3>Total Budget:</h3>
+                        <p id="totalBudget"></p>
+                        <h3>Spent:</h3>
+                        <p id="spent"></p>
+                        <h3>Remaining:</h3>
+                        <p id="remaining"></p>
+                        <a href="register.html" class="inline-btn">Update profile</a>
+                    </div>
+                </section>
             </div>
-         </section>
-      <div class=".right-section ">
-         <section class="employment">
-            <div class="user">
-               <h2>Employment Details</h2>
-               <p>Employment Type</p>
-               <h3>Student</h3>
-               <p>Annual Income</p>
-               <h3>Rs. 0-1 Lakhs</h3>
-            </div>
-         </section>
-      
-         <section class="budget">
-            <div class="user">
-               <h2>Monthly Budget</h2>
-               <h3>Total Budget:</h3>
-               <p> Rs. 1000</p>
-               <h3>Spent:</h3>
-               <p> Rs. 400</p>
-               <h3>Remaining:</h3>
-               <p> Rs. 600</p>
-               <a href="register.html" class="inline-btn">Update profile</a>
-            </div>
-         </section>
-      </div>
-      </main>
+        </main>
+        
       
       <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
+      <script type = "module" src="assets/js/main.js"></script>
+      <!-- Add this inside your <head> tag or at the end of your <body> tag -->
+      <script type = "module" src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+      <script type = "module" src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js"></script>
+      <script type = "module" src="./assets/js/profile.js"></script>
    </body>
 </html>
