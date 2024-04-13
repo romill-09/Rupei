@@ -28,7 +28,7 @@ const registerButton = document.getElementById("registerButton");
 registerButton.style.display = "none";
 
 const signInWithGoogle = async () => {
-  console.log("ji")
+  console.log("Signed In")
   try {
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
@@ -40,20 +40,11 @@ const signInWithGoogle = async () => {
   }
 };
 
-// Sign-out function
-// try {
-//   await signOut(auth);
-//   alert("You have signed out successfully!");
-//   // Hide the register button after sign-out
-//   registerButton.style.display = "none";
-// } catch (error) {
-//   console.error(error);
-// }
-
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, show the register button
     registerButton.style.display = "block";
+    
   } else {
     // User is signed out, hide the register button
     registerButton.style.display = "none";
