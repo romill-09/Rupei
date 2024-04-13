@@ -40,11 +40,20 @@ const signInWithGoogle = async () => {
   }
 };
 
+// Sign-out function
+// try {
+//   await signOut(auth);
+//   alert("You have signed out successfully!");
+//   // Hide the register button after sign-out
+//   registerButton.style.display = "none";
+// } catch (error) {
+//   console.error(error);
+// }
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, show the register button
     registerButton.style.display = "block";
-    
   } else {
     // User is signed out, hide the register button
     registerButton.style.display = "none";

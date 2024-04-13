@@ -38,7 +38,7 @@ submitClick.addEventListener("click", async(e) => {
     });
     console.log("Document successfully written!");
     // Optionally, you can redirect the user to another page after successful submission
-    window.location.href = "template.html";
+    window.location.href = "template1.html";
   } catch (error) {
     console.error("Error writing document: ", error);
   }
