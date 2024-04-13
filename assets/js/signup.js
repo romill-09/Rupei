@@ -22,7 +22,6 @@ const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
 const signInButton = document.getElementById("signInButton");
-const signOutButton = document.getElementById("signOutButton");
 const registerButton = document.getElementById("registerButton");
 
 registerButton.style.display = "none";
@@ -39,16 +38,6 @@ const signInWithGoogle = async () => {
     console.error(error);
   }
 };
-
-// Sign-out function
-// try {
-//   await signOut(auth);
-//   alert("You have signed out successfully!");
-//   // Hide the register button after sign-out
-//   registerButton.style.display = "none";
-// } catch (error) {
-//   console.error(error);
-// }
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -69,6 +58,6 @@ signInButton.addEventListener("click", () => {
 registerButton.addEventListener("click", () => {
   window.location.href = "register.html";
 });
-updateButton.addEventListener("click", () => {
-  window.location.href = "template1.html";
-});
+// updateButton.addEventListener("click", () => {
+//   window.location.href = "template1.html";
+// });

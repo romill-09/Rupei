@@ -48,17 +48,3 @@ const firebaseConfig = {
 // Get the logout link element
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const logoutLink = document.getElementById("logoutLink");
-
-// Add event listener for logout link
-logoutLink.addEventListener('click', async (event) => {
-    event.preventDefault(); // Prevent the default action of the link
-    try {
-        await signOut(auth);
-        console.log("User signed out successfully");
-        // Optionally, redirect the user to the login page or show a message
-        window.location.href = "login.html"; // Redirect to login page
-    } catch (error) {
-        console.error("Error signing out:", error);
-    }
-});
