@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container23 {
+    background-color: #fff;
+    padding: 40px; /* Increased padding */
+    border-radius: 10px; /* Increased border-radius */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Increased box shadow */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased margin-bottom */
+}
+
+button {
+    padding: 15px 30px; /* Increased padding */
+    background-color: #28a745; /* Changed button color to green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Darker shade of green on hover */
+}

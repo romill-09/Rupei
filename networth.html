@@ -6,8 +6,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
       <link rel="stylesheet" href="assets/css/styles.css">
-      <link rel="stylesheet" href="assets/css/istyles.css">
-      <title>Insurance</title>
+      <link rel="stylesheet" href="assets/css/nstyles.css">
+      <title>Net Worth</title>
    </head>
    <body>
       
@@ -40,7 +40,7 @@
 
             <div class="sidebar__content">
                <div class="sidebar__list">
-                  <a href="dashboard.html" class="sidebar__link active-link">
+                  <a href="dashboard.html" class="sidebar__link ">
                      <i class="ri-home-5-line"></i>
                      <span class="sidebar__link-name">Home</span>
                      <span class="sidebar__link-floating">Home</span>
@@ -80,10 +80,10 @@
                   <span class="sidebar__link-name">Family</span>
                   <span class="sidebar__link-floating">Family</span>
               </a>
-              <a href="insurance.html" class="sidebar__link">
+              <a href="management.html" class="sidebar__link active-link">
                   <i class="ri-shield-line"></i>
-                  <span class="sidebar__link-name">Insurance</span>
-                  <span class="sidebar__link-floating">Insurance</span>
+                  <span class="sidebar__link-name">Management</span>
+                  <span class="sidebar__link-floating">Management</span>
               </a>
               
 
@@ -101,16 +101,25 @@
             </div>
          </nav>
       </div>
-         <main class="main container" id="main">       
-            <div class="insurance-list">
-                <!-- Insurance data will be displayed here -->
+      <main class="main container" id="main">       
+        <div class="container23">
+            <h1>Net Worth Calculator</h1>
+            <div class="form-group">
+                <label for="assets">Total Assets:</label>
+                <input type="number" id="assets" placeholder="Enter total assets">
             </div>
-          </main>
-          
-          <script src="assets/js/main.js"></script>
-          <script type = "module" src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js"></script>
-          <script type = "module" src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
-          <script type = "module" src="assets/js/inscript.js"></script>
-          
-      </body>
+            <div class="form-group">
+                <label for="liabilities">Total Liabilities:</label>
+                <input type="number" id="liabilities" placeholder="Enter total liabilities">
+            </div>
+            <button id="calculatenetworthbutton">Calculate Net Worth</button>
+            <div id="result"></div><br>
+        </div>
+    
+     </main>
+          <script type="module" src="assets/js/main.js"></script>
+          <script type="module" src="assets/js/nscript.js"></script>
+
+    
+        </body>
 </html>
