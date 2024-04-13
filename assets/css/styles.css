@@ -116,7 +116,14 @@ img {
   color: var(--white-color);
   cursor: pointer;
 }
-
+.header__logo1 {
+  width: 40px;
+ margin-left:82% ;
+}
+.header__logo2 {
+  width: 45px;
+  border-radius:150px ;
+}
 .header__logo {
   width: 50px;
   border-radius:150px ;
@@ -272,11 +279,18 @@ img {
   border: 2px solid var(--white-color);
 }
 .name {
-  font-size: 1.2rem;
-  margin-top:5px;
+  font-size:2rem;
+  margin-top:12px;
   font-weight: bold;
   color: gray; /* Adjust color as needed */
-  margin-left: 10px; 
+  margin-left: 30px; 
+}
+.name1 {
+  font-size: 1.5rem;
+  margin-top:12px;
+  font-weight: bold;
+  color: gray; /* Adjust color as needed */
+  margin-left: 15px; 
 }
 .sidebar__account {
   display: flex;
