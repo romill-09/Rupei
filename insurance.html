@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="assets/css/istyles.css">
+      <title>Insurance</title>
+   </head>
+   <body>
+      
+
+     
+      <header class="header">
+         <div class="header__container container">
+            <div class="header__toggle" id="header-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+
+            <a href="scanner.html" class="header__logo1">
+               <img src="assets\img\images.png" alt="sidebar image" class="sidebar__logo-img">
+            </a>
+            <a href="chatbot.html" class="header__logo2">
+               <img src="assets\img\chatbot.png" alt="sidebar image" class="sidebar__logo-img">
+            </a>
+            <a href="dashboard.html" class="header__logo">
+               <img src="assets\img\Fif.png" alt="sidebar image" class="sidebar__logo-img">
+            </a>
+         </div>
+      </header>
+
+      <div class="sidebar" id="sidebar">
+         <nav class="sidebar__container">
+            <div class="sidebar__logo">
+               <img src="assets\img\Fif.png" alt="sidebar image" class="sidebar__logo-img">
+               <div class="name">₹upay</div>
+            </div>
+
+            <div class="sidebar__content">
+               <div class="sidebar__list">
+                  <a href="dashboard.html" class="sidebar__link active-link">
+                     <i class="ri-home-5-line"></i>
+                     <span class="sidebar__link-name">Home</span>
+                     <span class="sidebar__link-floating">Home</span>
+                  </a>
+                  <a href="profile.html" class="sidebar__link">
+                    <i class="ri-user-line"></i>
+                    <span class="sidebar__link-name">Profile</span>
+                    <span class="sidebar__link-floating">Profile</span>
+                 </a>
+                  
+                  <a href="expenses.html" class="sidebar__link">
+                     <i class="ri-money-dollar-circle-line"></i>
+                     <span class="sidebar__link-name">Expenses</span>
+                     <span class="sidebar__link-floating">Expenses</span>
+                  </a>
+                  
+                  <a href="insights.html" class="sidebar__link">
+                     <i class="ri-bar-chart-2-line"></i>
+                     <span class="sidebar__link-name">Insights</span>
+                     <span class="sidebar__link-floating">Insights</span>
+                  </a>
+                  <a href="about.html" class="sidebar__link">
+                     <i class="ri-information-line"></i>
+                     <span class="sidebar__link-name">About</span>
+                     <span class="sidebar__link-floating">About</span>
+                  </a>
+                  
+                  
+
+               <h3 class="sidebar__title">
+                  <span>General</span>
+               </h3>
+
+
+               <a href="family.html" class="sidebar__link">
+                  <i class="ri-user-smile-line"></i>
+                  <span class="sidebar__link-name">Family</span>
+                  <span class="sidebar__link-floating">Family</span>
+              </a>
+              <a href="insurance.html" class="sidebar__link">
+                  <i class="ri-shield-line"></i>
+                  <span class="sidebar__link-name">Insurance</span>
+                  <span class="sidebar__link-floating">Insurance</span>
+              </a>
+              
+
+                  <a href="signup.html" class="sidebar__link">
+                     <i class="ri-logout-box-r-line"></i>
+                     <span class="sidebar__link-name">Logout</span>
+                     <span class="sidebar__link-floating">Logout</span>
+                  </a>
+               </div>
+            </div>
+
+            <div class="sidebar__account">
+                  <img src="assets/img/Profilepicture.jpg" alt="sidebar image" class="sidebar__perfil">
+                  <div class="name1">Customer</div>
+            </div>
+         </nav>
+      </div>
+         <main class="main container" id="main">       
+            <div class="insurance-list">
+                <!-- Insurance data will be displayed here -->
+            </div>
+          </main>
+          
+          <script src="assets/js/main.js"></script>
+          <script type = "module" src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js"></script>
+          <script type = "module" src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+          <script type = "module" src="assets/js/inscript.js"></script>
+          
+      </body>
+</html>
