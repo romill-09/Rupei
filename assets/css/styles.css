@@ -54,6 +54,8 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--text-color);
+  background-color: #F5F5F5;
+  ;
 }
 
 a {
@@ -65,7 +67,10 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+.pageheader{
+  color: #55BE96;
+  margin-left:10px ;
+}
 /*=============== LAYOUT ===============*/
 .container {
   margin-inline: 1.5rem;
@@ -75,16 +80,7 @@ img {
   padding-top: 5rem;
 }
 
-.bg-image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
-}
+
 
 /*=============== HEADER ===============*/
 .header {
