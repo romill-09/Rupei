@@ -92,7 +92,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--dark-color-light);
+  background-color: black;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: var(--z-fixed);
@@ -214,7 +214,9 @@ img {
 .sidebar__link-floating {
   display: none;
 }
-
+#main{
+  color:black ;
+}
 .sidebar__link i {
   color: var(--white-color);
   font-size: 1.25rem;
