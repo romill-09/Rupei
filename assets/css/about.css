@@ -1,19 +1,24 @@
 .about {
     padding: 2rem;
+    margin-bottom:8% ;
+    color: black;
   }
   
   .about h1 {
     font-size: 2rem;
     font-weight: var(--font-semi-bold);
-    color: var(--text-color);
-    margin-bottom: 1.5rem;
+    color: black;
+    margin-bottom:5%;
+
   }
   
   .about p {
-    font-size: var(--normal-font-size);
-    line-height: 1.6;
+    margin-top:20px ;
+    color: gray;
+    font-size: 1.2rem;
+    line-height: 1.8;
     color: var(--text-color);
-    margin-bottom: 1.5rem;
+
   }
   
   .footer {
