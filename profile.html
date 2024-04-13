@@ -4,10 +4,11 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
-
+      <link rel="stylesheet" href="assets/css/profile.css">
       <link rel="stylesheet" href="assets/css/styles.css">
+     
 
-      <title>Profile Page</title>
+      <title>Profile-Page</title>
    </head>
    <body>
       
@@ -29,7 +30,7 @@
          <nav class="sidebar__container">
             <div class="sidebar__logo">
                <img src="assets\img\Filogo.png" alt="" class="sidebar__logo-img">
-               <div class="name">Financial Intelligence</div>
+               <!-- <div class="name">Financial Intelligence</div> -->
             </div>
 
             <div class="sidebar__content">
@@ -85,21 +86,52 @@
 
             <div class="sidebar__account">
                   <img src="assets/img/Profilepicture.jpg" alt="sidebar image" class="sidebar__perfil">
-    
+<!--     
                <div class="sidebar__names">
                   <h3 class="sidebar__name">Customer Name</h3>
                   <span class="sidebar__email">+91 999999999</span>
                   <span class="sidebar__email">customer@email.com</span>
-               </div>
-
-               <i class="ri-arrow-right-s-line"></i>
+               </div> -->
             </div>
          </nav>
       </div>
-
-      <main class="main container" id="main">
-         <h1>Profile Page</h1>
-
+   <main class="main container" id="main">
+         <section class="info">
+            <div class="user">
+               <img src="assets\img\Profilepicture.jpg" alt="" class="profileimg">
+               <h2>Contact Details</h2>
+               <p>Full Name</p>
+               <h3>Customer Name</h3>
+               <p>Phone Number</p>
+               <h3>(+91) 999999999</h3>
+               <p>Email Id</p>
+               <h3>customer@email.com</h3>
+            </div>
+         </section>
+      <div class=".right-section ">
+         <section class="employment">
+            <div class="user">
+               <h2>Employment Details</h2>
+               <p>Employment Type</p>
+               <h3>Student</h3>
+               <p>Annual Income</p>
+               <h3>Rs. 0-1 Lakhs</h3>
+            </div>
+         </section>
+      
+         <section class="budget">
+            <div class="user">
+               <h2>Monthly Budget</h2>
+               <h3>Total Budget:</h3>
+               <p> Rs. 1000</p>
+               <h3>Spent:</h3>
+               <p> Rs. 400</p>
+               <h3>Remaining:</h3>
+               <p> Rs. 600</p>
+               <a href="update.html" class="inline-btn">Update profile</a>
+            </div>
+         </section>
+      </div>
       </main>
       
       <!--=============== MAIN JS ===============-->
