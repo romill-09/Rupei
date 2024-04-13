@@ -1,0 +1,52 @@
+.about {
+    padding: 2rem;
+  }
+  
+  .about h1 {
+    font-size: 2rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .about p {
+    font-size: var(--normal-font-size);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer {
+    background-color: black;
+    color: var(--white-color);
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer__links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer__links li {
+    font-size: var(--small-font-size);
+  }
+  
+  .footer__links a {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer__links a:hover {
+    color: #55BE96;
+  }
+  
