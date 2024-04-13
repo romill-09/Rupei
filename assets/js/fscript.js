@@ -1,5 +1,5 @@
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const expenditureValues = [6200, 9000, 15200, 200,0 , 0, 0, 0, 0, 0, 0, 0];
+const expenditureValues = [6200, 9000, 10200, 200,0 , 0, 0, 0, 0, 0, 0, 0];
 
 const ctx = document.getElementById('my-chart').getContext('2d');
 const myChart = new Chart(ctx, {
