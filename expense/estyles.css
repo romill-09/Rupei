@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #010101; /* Black background */
+    color: #FFFFFF; /* White text */
+}
+
+h1, h2 {
+    text-align: center;
+}
+.expenses-list {
+    margin: 20px;
+    width: 90%; /* Set the width of the expenses list */
+    display: flex;
+    flex-direction: column; /* Ensure items are stacked vertically */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+.input-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #1C1C1C; /* Dark gray input section background */
+}
+
+.input-section label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #FFFFFF; /* White text */
+}
+
+.input-section input[type="number"],
+.input-section input[type="date"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.input-section button {
+    padding: 5px 10px;
+    background-color: #55BE96; /* Neon green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.expenses-list {
+    margin: 20px;
+}
+
+table {
+    width: 90%; /* Decrease table width */
+    border-collapse: collapse;
+    border-radius: 8px; /* Add curved border to tables */
+    overflow: hidden; /* Ensures border-radius works properly */
+}
+
+th, td {
+    border: 1px solid #55BE96; /* Change border color for better visibility */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #55BE96; /* Neon green header */
+    color: #010101; /* Black text */
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #55BE96; /* Neon green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

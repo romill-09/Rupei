@@ -1,0 +1,90 @@
+.chart-heading {
+  font-family: "Rubik", sans-serif;
+  color: #023047;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+}
+.chart-container {
+  width: 500px; /* Increase the width */
+  height: 505px; /* Increase the height */
+  margin: 0 auto;
+}
+.my-chart {
+  margin-top: 10px;
+}
+
+.legend {
+  margin-top: 10px;
+}
+
+.legend ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.legend li {
+  margin-bottom: 5px;
+}
+
+.legend span {
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.food-color { background-color: #FF6347; }
+.travel-color { background-color: #4682B4; }
+.college-color { background-color: #32CD32; }
+.clothes-color { background-color: #FFD700; }
+.gifts-color { background-color: #800080; }
+.medics-color { background-color: #4169E1; }
+.shopping-color { background-color: #008080; }
+.borrowed-color { background-color: #FF8C00; }
+.fuel-color { background-color: #A0522D; }
+.recharge-color { background-color: #2F4F4F; }
+.invest-color { background-color: #008000; }
+.sports-color { background-color: #FFA07A; }
+.personal-care-color { background-color: #B0E0E6; }
+.entertainment-color { background-color: #800000; }
+.holidays-color { background-color: #808000; }
+.savings-color { background-color: #228B22; }
+.charitable-donations-color { background-color: #9400D3; }
+
+.programming-stats {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto;
+  width: fit-content;
+  width: -moz-fit-content; 
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 8px 32px;
+  color: #023047;
+  transition: all 400ms ease;
+}
+
+.programming-stats:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+}
+
+.programming-stats .details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.programming-stats .details ul li {
+  font-size: 16px;
+  margin: 12px 0;
+  text-transform: uppercase;
+}
+
+.programming-stats .details .percentage {
+  font-weight: 700;
+  color: #e63946;
+}
