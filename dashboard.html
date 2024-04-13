@@ -2,14 +2,23 @@
    <html lang="en">
    <head>
       <meta charset="UTF-8">
+      <title>₹u</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
       <link rel="stylesheet" href="assets/css/styles.css">
-      <link rel="stylesheet" href="assets/css/dstyles.css" />
-      <title>Insights</title>
+      <link rel="stylesheet" href="assets/css/index_style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/piestyles.css">
+   
    </head>
    <body>
+      
+
+     
       <header class="header">
          <div class="header__container container">
             <div class="header__toggle" id="header-toggle">
@@ -98,47 +107,125 @@
             </div>
          </nav>
       </div>
+
       <main class="main container" id="main">
-        <h2 class="chart-heading">Expenses</h2>
-        <div class="programming-stats">
-          <div class="chart-container">
-            
-            <canvas class="my-chart"></canvas>
-          </div>
-          <!-- <div class="legend">
-            <ul>
-              <li><span class="food-color"></span> Food</li>
-              <li><span class="travel-color"></span> Travel</li>
-              <li><span class="college-color"></span> College</li>
-              <li><span class="clothes-color"></span> Clothes</li>
-              <li><span class="gifts-color"></span> Gifts</li>
-              <li><span class="medics-color"></span> Medics</li>
-              <li><span class="shopping-color"></span> Shopping</li>
-              <li><span class="borrowed-color"></span> Borrowed</li>
-              <li><span class="fuel-color"></span> Fuel</li>
-              <li><span class="recharge-color"></span> Recharge</li>
-              <li><span class="invest-color"></span> Invest</li>
-              <li><span class="sports-color"></span> Sports</li>
-              <li><span class="personal-care-color"></span> Personal Care</li>
-              <li><span class="entertainment-color"></span> Entertainment</li>
-              <li><span class="holidays-color"></span> Holidays</li>
-              <li><span class="savings-color"></span> Savings</li>
-              <li><span class="charitable-donations-color"></span> Charitable Donations</li>
+         <ul class="box-info">
+               <li>
+                  <i class='bx bxs-calendar-check' ></i>
+                  <span class="text">
+                     <h3>Rs. 1020</h3>
+                     <p>Expenses</p>
+                  </span>
+               </li>
+               <li>
+                  <i class='bx bxs-group' ></i>
+                  <span class="text">
+                     <h3>Rs. 2834</h3>
+                     
+                     <p>Budget</p>
+                  </span>
+               </li>
+               <li>
+                  <i class='bx bxs-dollar-circle' ></i>
+                  <span class="text">
+                     <h3>Rs. 2543</h3>
+                     <p>Total Savings</p>
+                  </span>
+               </li>
             </ul>
-          </div> -->
-          
-    
-          <!-- <div class="details">
-            <ul></ul>
-          </div> -->
-        </div>
-    
-        
-      </main>
+<!-- 
+            <ul class="box-info">
+               <li>
+                   <i class='ri-money-dollar-circle-line'></i>
+                   <span class="text" class="sidebar__logo-img">
+                       <h3>Rs. 1020</h3>
+                       <p>Expenses</p>
+                   </span>
+               </li>
+               
+               <li>
+                   <i class='ri-group-line'></i>
+                   <span class="text" class="sidebar__logo-img">
+                       <h3>Rs. 2834</h3>
+                       <p>Budget</p>
+                   </span>
+               </li>
+               <li>
+                  <i class='ri-savings-line' class="sidebar__logo-img"></i>
+                  <span class="text">
+                      <h3>Rs. 2543</h3>
+                      <p>Total Savings</p>
+                  </span>
+              </li>
+           </ul> -->
+           
+   
+   
+            <div class="table-data">
+               <div class="order">
+                  <div class="head">
+                     <h3>Transactions</h3>
+                     <i class='bx bx-search' ></i>
+                     <i class='bx bx-filter' ></i>
+                  </div>
+                  <table>
+                     <thead>
+                        <tr>
+                           <th>Expense</th>
+                           <th>Amount</th>
+                           <th>Date</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              
+                              <p>Savings</p>
+                           </td>
+                           <td>Rs. 100</td>
+                           <td>2024-01-04</td>
+                           
+                        </tr>
+                        <tr>
+                           <td>
+                              
+                              <p>SIP</p>
+                           </td>
+                           <td>Rs. 100</td>
+                           <td>2024-01-04</td>
+                           
+                        </tr>
+                        <tr>
+                           <td>
+                              
+                              <p>Investment</p>
+                           </td>
+                           <td>Rs. 100</td>
+                           <td>2024-01-04</td>
+                        </tr>
+                        
+                     </tbody>
+                  </table>
+               </div>
+               <div class="todo">
+                  <div class="head">
+                     <h2 class="chart-heading">Insights</h2>
+                     <i class='bx bx-plus' ></i>
+                     <i class='bx bx-filter' ></i>
+                  </div>
+                  <div class="chart-container">
+                     <canvas id="donut-chart"></canvas>
+   
+      </div>
+      
+    </div>
+   </section>
       
       <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/index_script.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script type="module" src="assets/js/dscript.js"></script>
-      <script type="module" src="assets/js/main.js"></script>
+      <script src="assets/js/piescript.js"></script>
+      
    </body>
 </html>
