@@ -1,0 +1,62 @@
+/* Heading styles */
+h1 {
+    text-align: center;
+    color: #55be96;
+    margin-bottom: 20px;
+    font-size: 36px; /* Increased font size for better emphasis */
+}
+
+/* Form styles */
+.investment-form {
+    margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+label {
+    display: block;
+    font-size: 18px; /* Increased font size for better readability */
+    margin-bottom: 15px; /* Reduced margin for better spacing */
+    color: #1c1c1c;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    border: 1px solid #ccc; /* Lightened border color for subtlety */
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #55be96; /* Changed focus border color to match button */
+}
+
+button {
+    width: 100%;
+    padding: 14px 0; /* Increased padding for better button size */
+    background-color: #55be96;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4ba582;
+}
+
+/* Insights styles */
+.insights {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Increased box shadow for better depth */
+    margin-top: 30px; /* Increased margin for better separation */
+}
+
+#cumulative-risk {
+    font-weight: bold;
+    color: #1c1c1c;
+    font-size: 20px; /* Increased font size for better emphasis */
+}
