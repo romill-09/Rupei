@@ -139,6 +139,8 @@ img {
   -webkit-backdrop-filter: blur(16px);
   z-index: var(--z-fixed);
   transition: left .4s;
+    background-color: black; /* Change background color to black */
+  
 }
 
 .sidebar::after {
