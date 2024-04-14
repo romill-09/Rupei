@@ -50,17 +50,17 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 //logout
-function logout() {
-    signOut(auth).then(() => {
-        // Sign-out successful.
-        console.log('User signed out!');
-        // Redirect to the signup page
-        window.location.href = 'signup.html'; // Adjust the URL as needed
-    }).catch((error) => {
-        // An error happened.
-        console.error('Error signing out:', error);
-    });
-}
+const logoutButton=document.querySelector('#logout')
+logoutButton.addEventListener('click',()=>{
+    signOut(auth)
+    .then(()=>{
+        console.log('the user is signed out')
+    })
+    .catch((err)=>{
+        console.log(err.message)
+    })
+})
+
 
 // Check if user is signed in
 auth.onAuthStateChanged((user) => {
@@ -71,5 +71,4 @@ auth.onAuthStateChanged((user) => {
         window.location.href = 'signup.html'; // Adjust the URL as needed
     }
 });
-
 
