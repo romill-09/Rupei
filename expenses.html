@@ -12,6 +12,20 @@
       <script type="module" src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js"></script>
       <title>Expenses</title>
    </head>
+   <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    databaseURL: "YOUR_DATABASE_URL",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
    <body>
       <header class="header">
          <div class="header__container container">
@@ -40,7 +54,7 @@
 
             <div class="sidebar__content">
                <div class="sidebar__list">
-                  <a href="dashboard.html" class="sidebar__link active-link">
+                  <a href="dashboard.html" class="sidebar__link">
                      <i class="ri-home-5-line"></i>
                      <span class="sidebar__link-name">Home</span>
                      <span class="sidebar__link-floating">Home</span>
@@ -51,7 +65,7 @@
                     <span class="sidebar__link-floating">Profile</span>
                  </a>
                   
-                  <a href="expenses.html" class="sidebar__link">
+                  <a href="expenses.html" class="sidebar__link active-link">
                      <i class="ri-money-dollar-circle-line"></i>
                      <span class="sidebar__link-name">Expenses</span>
                      <span class="sidebar__link-floating">Expenses</span>

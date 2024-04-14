@@ -4,13 +4,15 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
-     
+
       <link rel="stylesheet" href="assets/css/styles.css">
-      <link rel="stylesheet" href="assets/css/about.css">
-      <title>About</title>
+      <link rel="stylesheet" href="assets/css/risk.css">
+      <title>Risk-Management</title>
    </head>
    <body>
       
+
+     
       <header class="header">
          <div class="header__container container">
             <div class="header__toggle" id="header-toggle">
@@ -60,7 +62,7 @@
                      <span class="sidebar__link-name">Insights</span>
                      <span class="sidebar__link-floating">Insights</span>
                   </a>
-                  <a href="about.html" class="sidebar__link active-link">
+                  <a href="about.html" class="sidebar__link">
                      <i class="ri-information-line"></i>
                      <span class="sidebar__link-name">About</span>
                      <span class="sidebar__link-floating">About</span>
@@ -78,7 +80,7 @@
                   <span class="sidebar__link-name">Family</span>
                   <span class="sidebar__link-floating">Family</span>
               </a>
-              <a href="management.html" class="sidebar__link">
+              <a href="management.html" class="sidebar__link active-link">
                   <i class="ri-shield-line"></i>
                   <span class="sidebar__link-name">Management</span>
                   <span class="sidebar__link-floating">Management</span>
@@ -99,30 +101,31 @@
             </div>
          </nav>
       </div>
-      <main class="main container" id="main">
-         <section class="about">
-             <h1>About</h1>
-             <p>This finance aid web app is designed to help users manage their personal finances more effectively. It allows users to input their annual salary, expenses, and other financial details, and then calculates their monthly savings.</p>
-             <p>In addition to basic financial management, the app provides insights into users' expenditures, helping them identify areas where they can potentially save money. It also features a chatbot that offers personalized advice on saving and investing wisely.</p>
-             <p>Our goal is to empower individuals to take control of their finances and make informed decisions about their money.</p>
-         </section>
+      <main class="main container" id="main">       
+        <div class="container">
+            <h1>Risk Assessment</h1>
+            <div class="investment-form">
+                <label for="type">Investment Type:</label>
+                <select id="type">
+                    <option value="stocks">Stocks</option>
+                    <option value="stocks">Crypt</option>
+                    <option value="bonds">Bonds</option>
+                    <option value="bonds">Bonds</option>
+                    <option value="realEstate">Real Estate</option>
+                    <option value="realEstate">Real Estate</option>
+                </select>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount">
+                <button onclick="addInvestment()">Add Investment</button>
+            </div>
+            <div class="insights">
+
+                <p id="cumulative-risk"></p>
+            </div>
+        </div>
     
- 
-     <footer class="footer">
-         <div class="footer__container container">
-             <div class="footer__content">
-                 <p>&copy; 2024 Finance Aid Web App. All rights reserved.</p>
-                 <ul class="footer__links">
-                     <li><a href="#">Terms of Service</a></li>
-                     <li><a href="#">Privacy Policy</a></li>
-                     <li><a href="#">Contact Us</a></li>
-                 </ul>
-             </div>
-         </div>
-     </footer>
- </main>
-      
-      <!--=============== MAIN JS ===============-->
-      <script type="module" src="assets/js/main.js"></script>
-   </body>
+     </main>
+          <script type="module" src="assets/js/main.js"></script>
+          <script  src="assets/js/risk.js"></script>
+      </body>
 </html>

@@ -100,3 +100,4 @@ function addExpenseToTable(category, amount, date) {
 }
 
 });
+

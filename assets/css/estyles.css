@@ -25,10 +25,14 @@ h1, h2 {
     border-radius: 5px;
     background-color: #1C1C1C; /* Dark gray input section background */
 }
-
+#category-select {
+    width: 130px; /* Set your desired width */
+    height: 30px; /* Set your desired height */
+}
 .input-section label {
     font-weight: bold;
     margin-right: 10px;
+    border-radius: 5px;
     color: #FFFFFF; /* White text */
 }
 
