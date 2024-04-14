@@ -50,17 +50,17 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 //logout
-function checkAuthAndRedirect() {
-    auth.onAuthStateChanged(user => {
-        if (user) {
-            // User is signed in, redirect to dashboard or another authenticated page
-            window.location.href = 'dashboard.html';
-        } else {
-            // User is not signed in, allow access to the signup page
-            console.log('User is not signed in.');
-        }
-    });
-}
+const logoutButton=document.querySelector('#logout')
+logoutButton.addEventListener('click',()=>{
+    signOut(auth)
+    .then(()=>{
+        console.log('the user is signed out')
+    })
+    .catch((err)=>{
+        console.log(err.message)
+    })
+})
+
 
 // Check if user is signed in
 auth.onAuthStateChanged((user) => {
@@ -71,5 +71,4 @@ auth.onAuthStateChanged((user) => {
         window.location.href = 'signup.html'; // Adjust the URL as needed
     }
 });
-
 
