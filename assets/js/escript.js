@@ -81,3 +81,4 @@ addBtn.addEventListener('click', function(){
 
     addExpense(category, amount, date);
 });
+
