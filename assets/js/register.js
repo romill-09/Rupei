@@ -20,29 +20,37 @@ const db = getFirestore();
 const submitClick = document.getElementById("updateButton");
 
   // Validate contactNo
-  if (!/^\d{10}$/.test(contactNo)) {
-    alert("Contact No. must be exactly 10 digits long.");
-  }
-  
-submitClick.addEventListener("click", async(e) => {
-  e.preventDefault();
-  const fullName = document.getElementById("fullName").value;
-  const contactNo = document.getElementById("contactNo").value;
-  const employmentType = document.getElementById("employmentType").value;
-  const annualIncome = document.getElementById("annualIncome").value;
+  submitClick.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const fullName = document.getElementById("fullName").value;
+    const contactNo = document.getElementById("contactNo").value;
+    const employmentType = document.getElementById("employmentType").value;
+    const annualIncome = document.getElementById("annualIncome").value;
 
-  try {
-    // Add a new document to the "users" collection
-    await addDoc(collection(db, "users"), {
-      fullName,
-      contactNo,
-      employmentType,
-      annualIncome
-    });
-    console.log("Document successfully written!");
-    // Optionally, you can redirect the user to another page after successful submission
-    window.location.href = "dashboard.html";
-  } catch (error) {
-    console.error("Error writing document: ", error);
-  }
-})
+    // Check if any field is empty
+    if (!fullName || !contactNo || !employmentType || !annualIncome) {
+        alert("Please fill in all fields.");
+        return; // Exit the function early if any field is empty
+    }
+
+    // Validate contactNo
+    if (!/^\d{10}$/.test(contactNo)) {
+        alert("Contact No. must be exactly 10 digits long.");
+        return; // Exit the function early if contactNo is invalid
+    }
+
+    try {
+        // Add a new document to the "users" collection
+        await addDoc(collection(db, "users"), {
+            fullName,
+            contactNo,
+            employmentType,
+            annualIncome
+        });
+        console.log("Document successfully written!");
+        // Optionally, you can redirect the user to another page after successful submission
+        window.location.href = "dashboard.html";
+    } catch (error) {
+        console.error("Error writing document: ", error);
+    }
+});
