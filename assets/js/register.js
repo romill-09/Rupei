@@ -18,11 +18,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 const submitClick = document.getElementById("updateButton");
-
-  // Validate contactNo
-  if (!/^\d{10}$/.test(contactNo)) {
-    alert("Contact No. must be exactly 10 digits long.");
-  }
   
 submitClick.addEventListener("click", async(e) => {
   e.preventDefault();

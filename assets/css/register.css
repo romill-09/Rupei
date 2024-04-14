@@ -82,3 +82,19 @@ body {
         padding: 25px; /* Adjust padding for smaller screens */
     }
 }
+
+.link-container {
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#login-link {
+    cursor: pointer; 
+    text-decoration: none; 
+    color: #FFFFFF;
+}
+
+#login-link:hover {
+    text-decoration: underline;
+}
