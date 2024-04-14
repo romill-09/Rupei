@@ -30,7 +30,7 @@ sidebarLink.forEach(l => l.addEventListener('click', linkColor))
 
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
 import { getDatabase, ref, set, onValue, push } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 import { getFirestore, collection } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
@@ -48,3 +48,28 @@ const firebaseConfig = {
 // Get the logout link element
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+
+//logout
+function logout() {
+    signOut(auth).then(() => {
+        // Sign-out successful.
+        console.log('User signed out!');
+        // Redirect to the signup page
+        window.location.href = 'signup.html'; // Adjust the URL as needed
+    }).catch((error) => {
+        // An error happened.
+        console.error('Error signing out:', error);
+    });
+}
+
+// Check if user is signed in
+auth.onAuthStateChanged((user) => {
+    if (!user) {
+        // No user is signed in.
+        console.log('No user is signed in.');
+        // Redirect to the signup page
+        window.location.href = 'signup.html'; // Adjust the URL as needed
+    }
+});
+
+

@@ -17,16 +17,20 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
-
 const submitClick = document.getElementById("updateButton");
 
+  // Validate contactNo
+  if (!/^\d{10}$/.test(contactNo)) {
+    alert("Contact No. must be exactly 10 digits long.");
+    return;
+  }
+  
 submitClick.addEventListener("click", async(e) => {
   e.preventDefault();
   const fullName = document.getElementById("fullName").value;
   const contactNo = document.getElementById("contactNo").value;
   const employmentType = document.getElementById("employmentType").value;
   const annualIncome = document.getElementById("annualIncome").value;
-  console.log(fullName, contactNo, employmentType, annualIncome);
 
   try {
     // Add a new document to the "users" collection

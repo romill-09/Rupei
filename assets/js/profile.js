@@ -18,25 +18,40 @@ const db = getFirestore(app);
 // Retrieve the user ID from session storage
 const userId = sessionStorage.getItem('userId');
 
-if (userId) {
- // Fetch and display user data
- fetchAndDisplayUserData(userId);
-} else {
- console.log('User ID not found in session storage');
-}
-
-function fetchAndDisplayUserData(userId) {
- const userDocRef = doc(db, "users", userId);
-
- getDoc(userDocRef).then((docSnapshot) => {
-    if (docSnapshot.exists()) {
-      const userData = docSnapshot.data();
-      // Update your HTML elements with userData
+    if (userId) {
+      // Fetch and display user data
+      fetchAndDisplayUserData(userId);
     } else {
-      console.log("No such document!");
+      console.log('User ID not found in session storage');
     }
- }).catch((error) => {
-    console.error("Error getting document:", error);
- });
-}
 
+    function fetchAndDisplayUserData(userId) {
+      const userDocRef = db.collection("users").doc(userId);
+
+      userDocRef.get().then((docSnapshot) => {
+        if (docSnapshot.exists) {
+          const userData = docSnapshot.data();
+          displayUserData(userData);
+        } else {
+          console.log("No such document!");
+        }
+      }).catch((error) => {
+        console.error("Error getting document:", error);
+      });
+    }
+
+    function displayUserData(userData) {
+      // Get the HTML element to display user details
+      const userDetailsDiv = document.getElementById('user-details');
+
+      // Construct HTML to display user details
+      const userDetailsHTML = `
+        <p>Name: ${userData.name}</p>
+        <p>Email: ${userData.email}</p>
+        <p>Age: ${userData.age}</p>
+        <!-- Add more user details as needed -->
+      `;
+
+      // Set the inner HTML of the element to display user details
+      userDetailsDiv.innerHTML = userDetailsHTML;
+    }

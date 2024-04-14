@@ -462,3 +462,7 @@ img {
     padding-left: 120px;
   }
 }
+
+#logout {
+  cursor: pointer;
+}
