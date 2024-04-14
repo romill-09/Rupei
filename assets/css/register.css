@@ -75,3 +75,10 @@ body {
     color: #55BE96;
 }
 
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        max-width:60%; /* Adjust width to fit smaller screens */
+        padding: 25px; /* Adjust padding for smaller screens */
+    }
+}

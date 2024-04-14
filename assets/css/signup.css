@@ -52,3 +52,10 @@ img {
 #registerButton:hover {
     border: solid rgba(0, 0, 0, 0.2) !important;
 }
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 70%; /* Adjust width to fit smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
