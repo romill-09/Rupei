@@ -38,6 +38,7 @@ const submitClick = document.getElementById("updateButton");
         alert("Contact No. must be exactly 10 digits long.");
         return; // Exit the function early if contactNo is invalid
     }
+  })
   
 submitClick.addEventListener("click", async(e) => {
   e.preventDefault();
