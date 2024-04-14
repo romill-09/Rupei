@@ -2,41 +2,48 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/fireba
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAG4DZFxd7Dluszm4WJplNrlYkEL7wtkhM",
-  authDomain: "tn-expense-tracker.firebaseapp.com",
-  projectId: "tn-expense-tracker",
-  storageBucket: "tn-expense-tracker.appspot.com",
-  messagingSenderId: "282571308878",
-  appId: "1:282571308878:web:4f3e5c148c498750e7281f",
-};
+document.addEventListener('DOMContentLoaded', async function() {
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAG4DZFxd7Dluszm4WJplNrlYkEL7wtkhM",
+      authDomain: "tn-expense-tracker.firebaseapp.com",
+      projectId: "tn-expense-tracker",
+      storageBucket: "tn-expense-tracker.appspot.com",
+      messagingSenderId: "282571308878",
+      appId: "1:282571308878:web:4f3e5c148c498750e7281f",
+    };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const db = getFirestore(app);
+    // Initialize Firebase app
+    const firebaseApp = initializeApp(firebaseConfig);
 
-// Retrieve the user ID from session storage
-const userId = sessionStorage.getItem('userId');
+    const auth = getAuth(firebaseApp);
 
-if (userId) {
- // Fetch and display user data
- fetchAndDisplayUserData(userId);
-} else {
- console.log('User ID not found in session storage');
-}
+    const db = getFirestore(firebaseApp);
 
-function fetchAndDisplayUserData(userId) {
- const userDocRef = doc(db, "users", userId);
+    const user = auth.currentUser;
+    if (user) {
+       
+        document.getElementById('fullName').textContent = user.displayName;
+        document.getElementById('contactNo').textContent = user.phoneNumber;
+        document.getElementById('emailId').textContent = user.email;
 
- getDoc(userDocRef).then((docSnapshot) => {
-    if (docSnapshot.exists()) {
-      const userData = docSnapshot.data();
-      // Update your HTML elements with userData
+        const q = query(collection(db, "users"), where("email", "==", user.email));
+        const querySnapshot = await getDocs(q);
+        if (!querySnapshot.empty) {
+            querySnapshot.forEach(doc => {
+                const userData = doc.data();
+                // Display user details
+                document.getElementById('employmentType').textContent = userData.employmentType;
+                document.getElementById('annualIncome').textContent = userData.annualIncome;
+                document.getElementById('totalBudget').textContent = userData.totalBudget;
+                document.getElementById('spent').textContent = userData.spent;
+                document.getElementById('remaining').textContent = userData.remaining;
+            });
+        } else {
+            console.log("No user data found for the current user.");
+        }
     } else {
-      console.log("No such document!");
+        // No user is signed in
+        console.log('No user signed in.');
     }
- }).catch((error) => {
-    console.error("Error getting document:", error);
- });
-}
-
+});
