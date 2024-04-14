@@ -54,4 +54,11 @@
   .footer__links a:hover {
     color: #55BE96;
   }
+
+  #f, ul {
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
   
