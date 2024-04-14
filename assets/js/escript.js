@@ -2,6 +2,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import { getFirestore, collection, addDoc, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
 
+let expenses = [];
+let totalAmount = 0;
+
 document.addEventListener('DOMContentLoaded', function() {
     // Firebase configuration
     const firebaseConfig = {
@@ -54,50 +57,76 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     
 
-    // Function to add an expense to the table
-// Function to add an expense to the table
-function addExpenseToTable(category, amount, date) {
-    // Add expense to expenses array
-    expenses.push({ category, amount, date });
-
-    // Update total amount
-    totalAmount += amount;
-    totalAmountCell.textContent = 'Rs. ' + totalAmount.toFixed(2);
-
-    // Create a new row
-    const newRow = expenseTableBody.insertRow();
-
-    // Insert cells with expense data
-    const categoryCell = newRow.insertCell();
-    const amountCell = newRow.insertCell();
-    const dateCell = newRow.insertCell();
-    const deleteCell = newRow.insertCell();
-
-    // Fill cells with expense data
-    categoryCell.textContent = category;
-    amountCell.textContent = 'Rs. ' + amount.toFixed(2);
-    dateCell.textContent = date;
-
-    // Create delete button
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.classList.add('delete-btn');
-    deleteBtn.addEventListener('click', function(){
-        // Find index of expense in array
-        const expenseIndex = expenses.findIndex(expense => expense.category === category && expense.amount === amount && expense.date === date);
-        if (expenseIndex !== -1) {
-            // Update total amount
-            totalAmount -= expenses[expenseIndex].amount;
-            totalAmountCell.textContent = 'Rs. ' + totalAmount.toFixed(2);
-            // Remove expense from array and table
-            expenses.splice(expenseIndex, 1);
-            expenseTableBody.removeChild(newRow);
+    function addExpense(category, amount, date) {
+        expenses.push({ category, amount, date });
+    
+        totalAmount += amount;
+        totalAmountCell.textContent = 'Rs. ' + totalAmount.toFixed(2); // Displaying Rs. before the amount
+    
+        const newRow = expenseTableBody.insertRow();
+    
+        const categoryCell = newRow.insertCell();
+        const amountCell = newRow.insertCell();
+        const dateCell = newRow.insertCell();
+        const deleteCell = newRow.insertCell();
+    
+        const deleteBtn = document.createElement('button');
+    
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.classList.add('delete-btn');
+        deleteBtn.addEventListener('click', function(){
+            const expenseIndex = expenses.findIndex(expense => expense.category === category && expense.amount === amount && expense.date === date);
+            if (expenseIndex !== -1) {
+                totalAmount -= expenses[expenseIndex].amount;
+                totalAmountCell.textContent = 'Rs. ' + totalAmount.toFixed(2); // Update total amount
+                expenses.splice(expenseIndex, 1);
+                expenseTableBody.removeChild(newRow);
+            }
+        });
+    
+        categoryCell.textContent = category;
+        amountCell.textContent = 'Rs. ' + amount.toFixed(2); // Displaying Rs. before the amount
+        dateCell.textContent = date;
+        deleteCell.appendChild(deleteBtn);
+    }
+    
+    // Function to get the 1st of the current month in YYYY-MM-DD format
+    function getFirstDayOfMonth() {
+        const today = new Date();
+        const year = today.getFullYear();
+        let month = today.getMonth() + 1;
+    
+        // Add leading zero if month is single digit
+        month = (month < 10) ? '0' + month : month;
+    
+        return `${year}-${month}-01`;
+    }
+    
+    // Adding default expenses for savings, SIP, and stocks with the 1st of every month as the date
+    addExpense('Savings', 100, getFirstDayOfMonth());
+    addExpense('SIP', 100, getFirstDayOfMonth());
+    addExpense('Investment', 100, getFirstDayOfMonth());
+    
+    // Event listener for adding custom expenses
+    addBtn.addEventListener('click', function(){
+        const category = categorySelect.value;
+        const amount = Number(amountInput.value);
+        const date = dateInput.value;
+    
+        if(category === ''){
+            alert('Please select a category');
+            return;
         }
+        if(isNaN(amount) || amount <= 0){
+            alert('Please enter a valid amount');
+            return;
+        }
+        if(date === ''){
+            alert('Please select a date');
+            return;
+        }
+    
+        addExpense(category, amount, date);
     });
 
-    // Append delete button to delete cell
-    deleteCell.appendChild(deleteBtn);
-}
-
-});
-
+})
