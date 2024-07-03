@@ -57,7 +57,7 @@ function getFirstDayOfMonth() {
 
 // Adding default expenses for savings, SIP, and stocks with the 1st of every month as the date
 addExpense('Father', 100000, getFirstDayOfMonth());
-addExpense('Mother', 5000, getFirstDayOfMonth());
+addExpense('Mother', 0, getFirstDayOfMonth());
 
 // Event listener for adding custom expenses
 addBtn.addEventListener('click', function(){
