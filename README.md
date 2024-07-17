@@ -1,4 +1,4 @@
-# ₹upay
+# ₹upei
 Financial wellness Platform for Individuals and Families
 Despite the availability of various financial instruments, individuals struggle to manage their finances efficiently, especially when it comes to investments and savings, providing users with a centralised platform to manage their investments, savings, and overall financial well-being.
 
